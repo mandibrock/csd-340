@@ -1,0 +1,62 @@
+html, body {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+#container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+h1 {
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h2 {
+    font-weight: 500;
+    text-align: left;
+    padding-top: 15px;
+    color: #333333;
+}
+
+p {
+    font-weight: 400;
+    line-height: 1.4em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.intro {
+    text-indent: 2em;
+}
+
+.sentence {
+    font-style: italic;
+}
+
+address {
+    text-align: center;
+    font-style: normal;
+}
+
+address a {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #4F3674;
+    text-decoration: none;
+}
+
+address a:hover {
+    text-decoration: underline;
+    background-color: #D6A800;
+}
+
+address a:visited {
+    color: #7A5FA0;
+}
