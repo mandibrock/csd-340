@@ -1,0 +1,197 @@
+/* ===== SHARED DESIGN TOKENS ===== */
+:root {
+    --accent: 180, 167, 214;
+    --accent-soft: rgba(180, 167, 214, 0.10);
+    --accent-border: rgba(180, 167, 214, 0.2);
+    --accent-strong: rgba(180, 167, 214, 0.35);
+
+    --card-bg: rgba(10, 15, 25, 0.8);
+    --container-bg: rgba(22, 27, 34, 0.85);
+
+    --text-main: #c9d1d9;
+    --text-heading: #e6e1ff;
+}
+
+/* ===== GLOBAL ===== */
+body {
+    min-height: 100vh;
+    font-family: "Segoe UI", Roboto, sans-serif;
+    color: var(--text-main);
+    background:
+        radial-gradient(circle at 20% 10%, rgba(180, 167, 214, 0.15), transparent 40%),
+        radial-gradient(circle at 80% 20%, rgba(120, 160, 255, 0.12), transparent 45%),
+        radial-gradient(circle at 50% 100%, rgba(200, 140, 255, 0.1), transparent 50%),
+        #0d1117;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png');
+    opacity: 0.12;
+    pointer-events: none;
+}
+
+/* ===== CONTAINER ===== */
+#container {
+    overflow: auto;
+    width: 70%;
+    margin: 50px auto;
+    padding: 35px 40px;
+    background: var(--container-bg);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    border: 1px solid var(--accent-border);
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.7),
+        0 0 40px rgba(180, 167, 214, 0.08);
+}
+
+#container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    pointer-events: none;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(180, 167, 214, 0.15),
+        transparent
+    );
+    opacity: 0.2;
+}
+
+/* ===== TITLE ===== */
+h1 {
+    text-align: center;
+    font-size: 32px;
+    color: var(--text-heading);
+    margin-top: 0;
+    margin-bottom: 30px; 
+    padding: 10px;  
+    
+}
+
+hr {
+    flex-basis: 100%;
+    width: 100%;
+    border: none;
+    height: 1px;
+    margin: 0;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(180, 167, 214, 0.4),
+        transparent
+    );
+}
+
+
+/* ===== LAYOUT ===== */
+.columns {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    
+}
+
+h2 {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    padding: 12px 15px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    color: #e6e1ff;
+}
+
+.left, .right {
+    flex: 1 1 45%;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+/* ===== HEADINGS ===== */
+.left h2 {
+    border: 1px solid var(--accent-strong);
+    background: linear-gradient(
+        90deg,
+        var(--accent-soft),
+        rgba(120, 160, 255, 0.05)
+    );
+}
+
+.right h2 {
+    border: 1px dashed var(--accent-strong);
+    background: linear-gradient(
+        90deg,
+        var(--accent-soft),
+        rgba(120, 160, 255, 0.05)
+    );
+}
+
+/* ===== LISTS ===== */
+ol, ul {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+ol li, ul li {
+    margin-bottom: 6px;
+    padding-left: 5px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+ol li:hover, ul li:hover {
+    background: rgba(180, 167, 214, 0.06);
+    text-shadow: 0 0 4px rgba(180, 167, 214, 0.25);
+}
+
+.left ol {
+    border: 1px solid var(--accent-strong);
+    list-style-type: decimal;
+    padding-left: 40px;
+}
+
+.right ul {
+    border: 1px dashed var(--accent-strong);
+    list-style-type: upper-roman;
+    padding-left: 30px;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+/* ===== BOTTOM LINK ===== */
+.bottom {
+    font-size: 14px;
+    width: 100%;
+    margin-top: 60px;   
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.bottom a {
+    float: right;
+    color: #b4a7d6;
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.bottom a:hover {
+    text-decoration: underline;
+    background: rgba(180, 167, 214, 0.08);
+    color: #e2d9ff;
+    text-shadow: 0 0 6px var(--accent-glow);
+}
