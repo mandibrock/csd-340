@@ -117,7 +117,7 @@ h2 {
 /* ===== HEADINGS ===== */
 .left h2 {
     border: 1px solid var(--accent-strong);
-    background: linear-gradient(
+    background: linear-gradient( 
         90deg,
         var(--accent-soft),
         rgba(120, 160, 255, 0.05)

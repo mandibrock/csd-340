@@ -1,18 +1,16 @@
-/* ===== ROOT VARIABLES (your aesthetic foundation) ===== */
+/* ===== SHARED DESIGN TOKENS ===== */
 :root {
-    --accent: 180, 167, 214;
     --accent-soft: rgba(180, 167, 214, 0.10);
     --accent-border: rgba(180, 167, 214, 0.2);
     --accent-glow: rgba(180, 167, 214, 0.25);
 
-    --card-bg: rgba(10, 15, 25, 0.8);
     --container-bg: rgba(22, 27, 34, 0.85);
 
     --text-main: #c9d1d9;
     --text-heading: #e6e1ff;
 }
 
-/* ===== GLOBAL BODY ===== */
+/* ===== GLOBAL ===== */
 body {
     font-family: "Segoe UI", Roboto, sans-serif;
     color: var(--text-main);
@@ -26,7 +24,6 @@ body {
         #0d1117;
 }
 
-/* subtle texture */
 body::before {
     content: "";
     position: fixed;
@@ -36,7 +33,7 @@ body::before {
     pointer-events: none;
 }
 
-/* ===== MAIN CONTAINER ===== */
+/* ===== CONTAINER ===== */
 #container {
     width: 70%;
     margin: 50px auto;
@@ -52,6 +49,7 @@ body::before {
         0 15px 40px rgba(0,0,0,0.7),
         0 0 40px rgba(180, 167, 214, 0.08);
 }
+
 #container::before {
     content: "";
     position: absolute;
@@ -66,7 +64,8 @@ body::before {
     );
     opacity: 0.2;
 }
-/* ===== HEADINGS ===== */
+
+/* ===== TITLE ===== */
 h1 {
     text-align: center;
     color: var(--text-heading);
@@ -75,7 +74,7 @@ h1 {
     letter-spacing: 0.5px;
 }
 
-h3 {
+h2 {
     text-align: center;
     font-size: 14px;
     text-transform: uppercase;
@@ -94,7 +93,7 @@ h3 {
     color: var(--text-heading);
 }
 
-/* ===== IMAGE GALLERY GRID ===== */
+/* ===== GALLERY ===== */
 #image-gallery {
     margin-top: 10%;
     display: grid;
@@ -102,7 +101,7 @@ h3 {
     gap: 25px;
 }
 
-/* ===== INDIVIDUAL CARD ===== */
+/* ===== GALLERY ITEM ===== */
 .gallery-item {
     border-radius: 10px;
     border: 1px solid var(--accent-border);
@@ -113,11 +112,10 @@ h3 {
 .gallery-item:hover {
     transform: translateY(-6px);
     box-shadow:
-        0 12px 30px rgba(0,0,0,0.8),
-        0 0 15px var(--accent-glow);
+        0 12px 30px rgba(0,0,0,0.4);
 }
 
-/* ===== FIGURE / IMAGE ===== */
+/* ===== FIGURE ===== */
 figure {
     text-align: center;
     margin: 10px 0;
@@ -138,8 +136,8 @@ figcaption {
     margin-top: 8px;
 }
 
-/* ===== BACK LINK ===== */
-#back-link {
+/* ===== BOTTOM LINK ===== */
+#bottom {
     margin-top: 30px;
     font-size: 14px;
     text-align: right;
