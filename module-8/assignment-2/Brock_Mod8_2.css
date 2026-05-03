@@ -1,0 +1,302 @@
+/* ===== ROOT COLORS ===== */
+:root {
+    --accent: 180, 167, 214;
+    --accent-soft: rgba(180, 167, 214, 0.10);
+    --accent-border: rgba(180, 167, 214, 0.2);
+    --accent-strong: rgba(180, 167, 214, 0.35);
+
+    --card-bg: rgba(10, 15, 25, 0.8);
+    --container-bg: rgba(22, 27, 34, 0.85);
+
+    --text-main: #c9d1d9;
+    --text-heading: #e6e1ff;
+}
+
+/* ===== BACKGROUND ===== */
+body {
+    min-height: 100vh;
+    font-family: "Segoe UI", Roboto, sans-serif;
+    color: var(--text-main);
+    background:
+        radial-gradient(circle at 20% 10%, rgba(180, 167, 214, 0.15), transparent 40%),
+        radial-gradient(circle at 80% 20%, rgba(120, 160, 255, 0.12), transparent 45%),
+        radial-gradient(circle at 50% 100%, rgba(200, 140, 255, 0.1), transparent 50%),
+        #0d1117;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png');
+    opacity: 0.12;
+    pointer-events: none;
+}
+
+/* ===== CONTAINER ===== */
+#container {
+    overflow: auto;
+    width: 70%;
+    margin: 50px auto;
+    padding: 35px 40px;
+    background: var(--container-bg);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    border: 1px solid var(--accent-border);
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.7),
+        0 0 40px rgba(180, 167, 214, 0.08);
+    position: relative;
+}
+
+#container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    pointer-events: none;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(180, 167, 214, 0.15),
+        transparent
+    );
+    opacity: 0.2;
+}
+
+/* ===== HEADER ===== */
+header {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 32px;
+    color: var(--text-heading);
+    margin-top: 0;
+    margin-bottom: 20px; 
+    padding: 10px;  
+    
+}
+
+/* ===== NAVBAR ===== */
+#navbar {
+    overflow: hidden;
+    border-bottom: 15px solid rgba(180, 167, 214, 0.4);
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+
+#navbar a {
+    float: left;
+    display: block;
+    color: #b4a7d6;
+    padding: 6px 10px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    font-size: 14px; 
+    font-weight: 400;
+    letter-spacing: 0.3px; 
+}
+
+#navbar a:hover {
+    background: rgba(180, 167, 214, 0.08);
+    color: #e2d9ff;
+    text-shadow: 0 0 6px var(--accent-glow);
+}
+
+/* ===== DIVIDER ===== */
+hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(180, 167, 214, 0.4),
+        transparent
+    );
+    margin-bottom: 25px;
+}
+
+
+/* ===== SECTION HEADER ===== */
+h2 {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    padding: 12px 15px;
+    border-radius: 6px;
+    margin-bottom: 5px;
+    color: #e6e1ff;
+
+    border: 1px solid var(--accent-strong);
+
+    background: linear-gradient( 
+        90deg,
+        var(--accent-soft),
+        rgba(120, 160, 255, 0.05)
+    );
+}
+
+.card {
+    width: 50%;
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 2%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--accent-border);
+    transition: all 0.25s ease;
+}
+.card:hover {
+    box-shadow:
+        0 10px 18px 0 rgba(0,0,0,0.3);
+}
+.card-title {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    padding: 10px 12px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    color: #e6e1ff;
+
+}
+.card-content {
+    padding: 2px 16px;
+    background: transparent;
+    border: none;
+}
+.card-content ol {
+    padding-left: 30px;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+.card-content li {
+    margin-bottom: 6px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.card-content li:hover {
+    background: rgba(180, 167, 214, 0.06);
+    text-shadow: 0 0 4px rgba(180, 167, 214, 0.25);
+}
+.card-content a {
+    color: var(--text-main);
+    text-decoration: none;
+}
+
+.card-content a:hover {
+    color: #e2d9ff;
+    text-decoration: underline;
+}
+/* ===== MOVIES TABLE ===== */
+#movies {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 14px; /* match your card text */
+    font-weight: 300;
+}
+
+#movies th {
+    padding: 12px 10px;
+    text-align: left;
+    color: var(--text-heading);
+    font-weight: 500;
+    letter-spacing: 0.3px;
+
+    border-bottom: 1px solid var(--accent-border);
+
+    background: rgba(180, 167, 214, 0.12); 
+}
+
+#movies td {
+    border-bottom: 1px solid var(--accent-border);
+    padding: 14px 10px;
+    vertical-align: top;
+}
+
+#movies td,
+#movies th {
+    border-left: none;
+    border-right: none;
+}
+
+#movies tr {
+    transition: all 0.2s ease;
+}
+
+#movies tr:hover {
+    background: rgba(180, 167, 214, 0.06);
+}
+
+#movies ul {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+#movies li {
+    margin-bottom: 4px;
+}
+#movies tr:last-child td {
+    border-bottom: none;
+}
+/* ===== FOOTER ===== */
+footer {
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    right: 0; /* use this instead of width */
+
+    padding: 0 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-left {
+    margin: 0;
+    text-align: left;
+}
+
+.footer-right {
+    margin: 0;
+    text-align: right;
+}
+
+footer p {
+    font-size: 14px;
+    font-style: italic;
+    width: 100%;
+    margin-top: 60px;   
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+footer a {
+    color: #b4a7d6;
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    background: rgba(180, 167, 214, 0.08);
+    color: #e2d9ff;
+}
