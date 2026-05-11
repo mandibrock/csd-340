@@ -1,0 +1,83 @@
+// Name: Amanda Brock
+// Date: May 10, 2026
+// Purpose: Add Javascript capability to a previous assignment.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Assignment 9.3 JavaScript Part 1">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Bellevue University">
+    <meta name="author" content="Amanda Brock">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSD 340 Web Development with HTML and CSS</title>
+
+    <link rel="stylesheet" type="text/css" href="../module-2/Brock_Mod2_2.css">
+
+    <script>
+        var word1 = "adventure";
+        var word2 = "music";
+        var word3 = "creative";
+        var word4 = "family";
+    </script>
+</head>
+
+<body>
+
+<div id="container">
+
+    <h1>Assignment 9.3: JavaScript - Part 1</h1>
+
+    <h2>A Little About Me</h2>
+
+    <p>
+        Growing up, I always loved trying new things and looking for the next 
+        <span id="blank1">__________</span>. 
+        Whether it was sports, traveling, or learning something new, I never liked staying in one place for too long.
+    </p>
+
+    <p>
+        One of the biggest things in my life has always been 
+        <span id="blank2">__________</span>. 
+        I love going to EDM festivals and concerts because the atmosphere and energy make everything feel exciting and alive.
+    </p>
+
+    <p>
+        I also enjoy drawing and doing anything 
+        <span id="blank3">__________</span>. 
+        It gives me a chance to relax and express myself after long days at work or school.
+    </p>
+
+    <p>
+        At the end of the day, the most important thing to me is spending time with my 
+        <span id="blank4">__________</span>. 
+        Even simple moments together can end up becoming the best memories.
+    </p>
+
+    <br>
+
+    <button type="button"
+        onclick="document.getElementById('blank1').innerHTML = word1">
+        adventure
+    </button>
+
+    <button type="button"
+        onclick="document.getElementById('blank2').innerHTML = word2">
+        music
+    </button>
+
+    <button type="button"
+        onclick="document.getElementById('blank3').innerHTML = word3">
+        creative
+    </button>
+
+    <button type="button"
+        onclick="document.getElementById('blank4').innerHTML = word4">
+        family
+    </button>
+
+</div>
+
+</body>
+</html>
